@@ -1,0 +1,14 @@
+<routes>
+<vType id="pkw" length="5" maxSpeed="23" accel="0.8" decel="4.5" vClass="passenger"/>
+<vType id="bus" length="10" maxSpeed="13.88" accel="0.4" decel="2.0" vClass="bus"/>
+<!-- <flow id="p1" type="pkw" color="1,0,0" from="E10" begin="0" end="2000" period="1.33" /> -->
+<flow id="b1" type="bus" color="1,1,0" from="E10" begin="0" end="2000" period="1.33" />
+<!-- <flow id="p2" type="pkw" color="1,0,1" from="E20" begin="0" end="2000" period="1.33" /> -->
+<flow id="b2" type="bus" color="1,1,0" from="E20" begin="0" end="2000" period="1.33" />
+<!-- <flow id="p3" type="pkw" color="0,0,1" from="E30" begin="0" end="2000" period="1.33" /> -->
+<flow id="b3" type="bus" color="1,1,0" from="E30" begin="0" end="2000" period="1.33" />
+<!-- <flow id="p4" type="pkw" color="1,1,1" from="E40" begin="0" end="2000" period="1.33" /> -->
+<flow id="b4" type="bus" color="1,1,0" from="E40" begin="0" end="2000" period="1.33" />
+</routes>
+
+

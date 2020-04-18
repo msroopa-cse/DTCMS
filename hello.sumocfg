@@ -1,0 +1,9 @@
+<configuration xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+<input>
+<net-file value="project2.net.xml"/>
+<route-files value="my.rou.xml"/>
+</input>
+<time><begin value="0"/></time>
+
+</configuration>
+
