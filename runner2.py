@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 """
 @file    runner.py
-@author  Lena Kalleske
-@author  Daniel Krajzewicz
-@author  Michael Behrisch
-@author  Jakob Erdmann
-@date    2009-03-26
-@version $Id: runner.py 18756 2015-08-31 19:16:33Z behrisch $
+@author  Roopa
+
+@date    2017-03-26
+@version $Id: runner.py  $
 
 Tutorial for traffic light control via the TraCI interface.
 This scenario models a pedestrian crossing which switches on demand.
@@ -211,14 +209,14 @@ def run():
             if ptime!=0:
                 prate = n/ptime
                 
-            print ("passing rate is "+str(prate))
+            print ("Flow rate is "+str(prate))
             a=(str(lane_))
             #print a
             b=('RS'+str(segment+1))
             #print b
             df1[a][b]=prate
             #df2[a][b]=ptime
-     print("******The passing rate Matrix is as follows******")
+     print("******The Flow rate Matrix is as follows******")
      print(df1)
      #df1.plot() 
                 
@@ -247,10 +245,10 @@ def run():
      #for r in APR:
       #  print(r)          
                 
-     print("******The aggregated passing rate is as follows******")
+     print("******The aggregated flow rate is as follows******")
      for r in APR:
         print(APR)
-     print("******The 16 Transition Matrices Printed below******")
+     print("******The 16 Condition Matrices Printed below******")
      data1= [[1,0,0,0],[1,0,0,0],[0,0,1,0],[0,0,1,0]]
      TM1 = pd.DataFrame(data1,dtype=float)
      print (TM1)
@@ -311,7 +309,7 @@ def run():
      #print WAPR
      for frame in WAPR:
             STOTAL.append(frame.sum().sum())
-     print("******The following list contains the sum of passing rates for each ont f the 16 transition matrices when multiplied with aggregated passing rates******")
+     print("******The following list contains the sum of flow rates for each ont f the 16 condition matrices when multiplied with aggregated flow rates******")
      print(STOTAL)
    
      #plt.rcdefaults()
@@ -333,7 +331,7 @@ def run():
      print(max_value)
      matrix_selection = STOTAL.index(max_value)
      #print matrix_selection
-     print("#####The selected Transition matrix#####")
+     print("#####The selected Condition matrix#####")
      print (list_T[matrix_selection])
      no_of_veh = traci.vehicle.getIDCount()
 
