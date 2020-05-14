@@ -137,7 +137,7 @@ def run():
          elif '_0' in lane:
              if stra==0:
                  df['1']['_0']=1
-     print("******The Flow attribute Matrix is as follows******")
+     print("******The Drift attribute Matrix is as follows******")
      print(df)
      #.plot()
      for segment in range(0,4):
@@ -189,7 +189,7 @@ def run():
              #print acc
 
          
-         #calculate the passing rate using the formula
+         #calculate the flow rate using the formula
          if not veh_list: print("*********** veh_list is empty to show passing rate ")
          else:
             ptime = (-speed + math.sqrt((speed*speed)+2*accel*distance))/accel
@@ -197,7 +197,7 @@ def run():
             
             
             
-            ##########################################enter passing time matrix here
+            ##########################################enter flow time matrix here
             #col = ['2', '1', '0']
             #row = ['RS1','RS2','RS3','RS4']
 
